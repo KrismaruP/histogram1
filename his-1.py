@@ -16,3 +16,12 @@ for lin in hand :
         #Using the idiom .get to retrieve, create, update, counter
         di[w] = di.get(w,0) + 1
     print(di)
+
+#Looking for the maximum and finding the most common word. Doing a maximum loop
+largest = -1
+theword = None
+for k,v in di.items() :
+    if v > largest :
+        largest = v
+        theword = k
+print(theword, largest)
