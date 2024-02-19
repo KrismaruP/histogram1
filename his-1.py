@@ -3,6 +3,8 @@ fname = input('Enter a file name: ')
 if len(fname) < 1 : fname ='my-captain.txt'
 hand = open(fname)
 
+
+di = dict()
 for lin in hand :
     #Taking the white spaces off the right hand side
     lin = lin.rstrip()
@@ -11,5 +13,6 @@ for lin in hand :
     wds = lin.split()
     print(wds)
     for w in wds :
-        #Making sure you are going through all the words
-        print(w)
+        #Using the idiom .get to retrieve, create, update, counter
+        di[w] = di.get(w,0) + 1
+    print(di)
